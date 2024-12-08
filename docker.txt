@@ -1,4 +1,5 @@
-FROM	httpd:latest
+FROM	nginx:latest
 RUN	yum update
-COPY	./index.html /var/www/html
+COPY	./index.html /usr/local/htdocs/
 EXPOSE	8080/tcp
+WORKDIR	/nginx
